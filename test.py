@@ -1,7 +1,7 @@
 
 import streamlit as st
 #import textblob
-from textblob import TextBlob
+#from textblob import TextBlob
 import sys
 import tweepy
 import matplotlib.pyplot as plt
