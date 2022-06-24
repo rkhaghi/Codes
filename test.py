@@ -15,8 +15,8 @@ import streamlit as st
 #import pickle
 
 from PIL import Image
-image = Image.open('w.jpg')
-
+htp5 = "https://github.com/rkhaghi/Codes/blob/main/W.jpg"
+st.image(htp5, caption= '80-day sale data', width=300)
 #import sys
 #from streamlit import cli as stcli
 
