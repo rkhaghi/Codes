@@ -1,15 +1,11 @@
 
-tweepy == 3.10.0
+tweepy
 matplotlib
 textblob
-pycountry == 22.3.5
+pycountry
 seaborn 
 wordcloud
 langdetect
 sklearn
-pandas
 preprocessor
-nltk
-streamlit
-PIL 
-streamlit_option_menu 
+
