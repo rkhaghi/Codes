@@ -2,4 +2,4 @@
 tweepy == 3.10.0
 matplotlib
 textblob
-pycountry
+pycountry == 22.3.5
