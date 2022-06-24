@@ -15,6 +15,8 @@ import streamlit as st
 #import pickle
 
 from PIL import Image
+
+st.title('welcome to Westfield')
 htp5 = "https://github.com/rkhaghi/Codes/blob/main/W.jpg"
 st.image(htp5, caption= '80-day sale data', width=300)
 #import sys
@@ -24,5 +26,4 @@ st.image(htp5, caption= '80-day sale data', width=300)
 #    sys.argv = ["streamlit", "run", "APP_NAME.py"]
 #    sys.exit(stcli.main())
 
-st.title('welcome to Westfield')
 
