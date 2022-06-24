@@ -1,5 +1,4 @@
 
-pip install tweepy
 
 
 import streamlit as st
