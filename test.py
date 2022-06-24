@@ -1,6 +1,6 @@
 
 import streamlit as st
-import textblob
+#import textblob
 from textblob import TextBlob
 import sys
 import tweepy
