@@ -25,4 +25,4 @@ st.image(htp5, caption= '80-day sale data', width=300)
 #    sys.exit(stcli.main())
 
 st.title('welcome to Westfield')
-st.image(image, caption='West')
+
