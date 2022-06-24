@@ -108,7 +108,7 @@ def percentage(part,whole):
  return 100 * float(part)/float(whole)
 #since_date = '202205261000'
 #until_date = '202205262300'
-tweets = tweepy.Cursor(api.search, q=new_search, count =200, lang='en').items(noOfTweet)
+tweets = tweepy.Cursor(api.search_tweets, q=new_search, count =200, lang='en').items(noOfTweet)
 positive = 0
 negative = 0
 neutral = 0
