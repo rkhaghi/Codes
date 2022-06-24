@@ -17,7 +17,7 @@ import streamlit as st
 from PIL import Image
 
 st.title('welcome to Westfield')
-htp5 = "https://github.com/rkhaghi/Codes/blob/main/W.jpg"
+htp5 = "https://github.com/rkhaghi/Codes/blob/main/W.jpg?raw=true"
 st.image(htp5, caption= '80-day sale data', width=100)
 #import sys
 #from streamlit import cli as stcli
