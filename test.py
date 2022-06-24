@@ -40,7 +40,7 @@ import streamlit as st
 #import pickle
 
 from PIL import Image
-image = Image.open('w.jpg')
+#image = Image.open('w.jpg')
 
 import sys
 from streamlit import cli as stcli
