@@ -220,10 +220,13 @@ if st.button("Analyse"):
     tweets_df.user_location.replace('','unknown location', inplace = True)
 
 
-    pp=plot_percentage("user_location", "countries", tweets_df)   
+    pp=plot_percentage("user_location", "countries", tweets_df) 
+    
+    st.pyplot(pp)
+    
     pp2 = plot_percentage("source", "sources", tweets_df)   
    
-    st.pyplot(pp)
+    
     st.pyplot(pp2)
     
 
