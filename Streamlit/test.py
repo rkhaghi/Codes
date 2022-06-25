@@ -79,24 +79,12 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_key, access_secret)
 api = tweepy.API(auth,wait_on_rate_limit=True)
 
-def inputs():
-    st.sidebar.header("chart inputs")
-    ticker = st.sidebar.text_input('Symbol', 'APPl')
-    start = st.sidebar.date_input('Start Date' , start_date)
-    end = st.sidebar.date_input('End Date' , today)
-    button = st.sidebar.button('Get Chart!')
-    return ticker, start, end, button
 
-
-#with st.sidebar:
- #   selected = option_menu("Main Menu", ["Home", 'Settings'], 
-  #      icons=['house', 'gear'], menu_icon="cast", default_index=1)
-   # selected
 
 
 #option = st.selectbox('which ML',( 'RF', 'CNN'))
 
-user_input_name = st.text_input("enter the search word(required) with #")
+user_input_name = st.text_input("Please Insert the Search Word(required) with #")
 
 if not user_input_name:
     st.warning('Please fill out the required filled')
