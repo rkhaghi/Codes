@@ -53,7 +53,7 @@ from streamlit_option_menu import option_menu
 
 
 st.title('Twitter Sentiment Analysis')
-htp5 = "https://github.com/rkhaghi/Codes/blob/main/tw2.jpg?raw=true"
+htp5 = "https://github.com/rkhaghi/Codes/blob/main/Streamlit/img2.jpg?raw=true"
 st.image(htp5)
 
 
