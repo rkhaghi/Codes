@@ -231,12 +231,7 @@ if st.button("Analyse"):
     
 
 
-def main():
-    inputs()
 
-
-if __name__ == '__main__':
-    main()
 
     
 
