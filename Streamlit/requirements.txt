@@ -1,2 +1,12 @@
 
-tweepy == 3.10.0
+tweepy
+matplotlib
+textblob
+pycountry
+seaborn 
+wordcloud
+langdetect
+sklearn
+preprocessor
+streamlit_option_menu
+textblob
