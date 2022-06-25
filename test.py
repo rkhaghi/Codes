@@ -88,10 +88,10 @@ def inputs():
     return ticker, start, end, button
 
 
-with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    selected
+#with st.sidebar:
+ #   selected = option_menu("Main Menu", ["Home", 'Settings'], 
+  #      icons=['house', 'gear'], menu_icon="cast", default_index=1)
+   # selected
 
 
 #option = st.selectbox('which ML',( 'RF', 'CNN'))
