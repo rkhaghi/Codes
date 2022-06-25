@@ -110,7 +110,7 @@ if st.button("Analyse"):
     search_words = user_input_name      #enter your words
     new_search = search_words + " -filter:retweets"
     
-    tweets = tweepy.Cursor(api.search, q=new_search, count =200, lang='en').items(noOfTweet)
+    tweets = tweepy.Cursor(api.search_tweets, q=new_search, count =200, lang='en').items(noOfTweet)
     positive = 0
     negative = 0
     neutral = 0
