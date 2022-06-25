@@ -207,8 +207,8 @@ if st.button("Analyse"):
 
     tweets_df.user_location.replace('','unknown location', inplace = True)
 
-   st.image('test.png')
-   st.pyplot(fig)
+    st.image('test.png')
+    st.pyplot(fig)
    
     pp=plot_percentage("user_location", "countries", tweets_df) 
     
