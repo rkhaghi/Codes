@@ -196,8 +196,8 @@ if st.button("Analyse"):
     plt.axis('off')
     plt.savefig('test',dpi=400)
     st.balloons()
-    st.pyplot(fig)
-    st.image('test.png')
+    
+    
     
     def plot_percentage(feature, title, df):
         fig,ax = plt.subplots(1,1, figsize = (10,10))
@@ -207,7 +207,9 @@ if st.button("Analyse"):
 
     tweets_df.user_location.replace('','unknown location', inplace = True)
 
-
+   st.image('test.png')
+   st.pyplot(fig)
+   
     pp=plot_percentage("user_location", "countries", tweets_df) 
     
     st.pyplot(pp)
