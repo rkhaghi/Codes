@@ -100,7 +100,7 @@ def plot_percentage(feature, title, df):
          
 
 option = st.selectbox(
-     'Please Select a Python library',
+     'Please Select a Python Library',
      ('Vader NLTK', 'TextBlob', 'RoBERTa'))
 
 access_key = '536431479-oeSznH3Mk7H5XATWqzsSs1RMwzjpzJpP8eD2h9e3'
