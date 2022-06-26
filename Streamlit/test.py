@@ -128,7 +128,7 @@ if  option =='Vader NLTK' and st.button("Analyse") :
         st.write(' ')
 
     with col2:
-        gif_runner = st.image('ww.gif')
+        gif_runner = st.image('https://github.com/rkhaghi/Codes/blob/main/Streamlit/ww.gif?raw=true',width = 500)
 
     with col3:
         st.write(' ')
@@ -272,7 +272,7 @@ elif option == 'RoBERTa' and st.button("Analyse"):
         st.write(' ')
 
     with col2:
-        gif_runner = st.image('ww.gif', width = 500)
+        gif_runner = st.image('https://github.com/rkhaghi/Codes/blob/main/Streamlit/ww.gif?raw=true', width = 500)
 
     with col3:
         st.write(' ')
@@ -412,7 +412,7 @@ elif option == 'TextBlob' and st.button("Analyse"):
         st.write(' ')
 
     with col2:
-        gif_runner = st.image('ww.gif', width = 500)
+        gif_runner = st.image('https://github.com/rkhaghi/Codes/blob/main/Streamlit/ww.gif?raw=true',width = 500)
 
     with col3:
         st.write(' ')
