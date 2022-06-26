@@ -10,4 +10,4 @@ sklearn
 preprocessor
 streamlit_option_menu
 textblob
-transformers
+
