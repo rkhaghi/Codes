@@ -77,7 +77,7 @@ def percentage(part,whole):
 #csvFile = open('file-name', 'a')
 #csvWriter = csv.writer(csvFile)
 user_input_name = st.text_input("enter the search word(required) with #")
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 if not user_input_name:
     st.warning('Please fill out the required filled')
 
