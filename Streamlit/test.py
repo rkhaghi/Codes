@@ -28,9 +28,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 import tweepy
 from tweepy import *
 
-import transformers
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-from scipy.special import softmax
+#import transformers
+#from transformers import AutoTokenizer, AutoModelForSequenceClassification
+#from scipy.special import softmax
  
 import pandas as pd
 import csv
@@ -57,7 +57,7 @@ from streamlit_option_menu import option_menu
 
 
 st.title('Twitter Sentiment Analysis')
-htp5 = "https://github.com/rkhaghi/Codes/blob/main/Streamlit/img2.jpg?raw=true"
+#htp5 = "https://github.com/rkhaghi/Codes/blob/main/Streamlit/img2.jpg?raw=true"
 st.image(htp5)
 from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -87,9 +87,9 @@ if not noOfTweet:
     st.warning('Please Inset Number of Tweets')
 
 
-roberta = "cardiffnlp/twitter-roberta-base-sentiment"
-model = AutoModelForSequenceClassification.from_pretrained(roberta)
-tokenizer = AutoTokenizer.from_pretrained(roberta)
+#roberta = "cardiffnlp/twitter-roberta-base-sentiment"
+#model = AutoModelForSequenceClassification.from_pretrained(roberta)
+#tokenizer = AutoTokenizer.from_pretrained(roberta)
 
 
 def plot_percentage(feature, title, df):
