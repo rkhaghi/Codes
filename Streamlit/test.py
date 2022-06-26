@@ -27,7 +27,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from sklearn.feature_extraction.text import CountVectorizer
 import tweepy
 from tweepy import *
-import torch
+
 import transformers
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
@@ -266,142 +266,7 @@ if  option =='Vader NLTK' and st.button("Analyse") :
 
 elif option == 'RoBERTa' and st.button("Analyse"):
     
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.write(' ')
-
-    with col2:
-        gif_runner = st.image('https://github.com/rkhaghi/Codes/blob/main/Streamlit/ww.gif?raw=true', width = 500)
-
-    with col3:
-        st.write(' ')
-    
-    positive = 0
-    negative = 0
-    neutral = 0
-    polarity = 0
-    tweet_list = []
-    neutral_list = []
-    negative_list = []
-    positive_list = []
-    tweets_copy=[]
-    tweet_geo=[]
-    for tweet in tweets:
-        tweet_list.append(tweet.text)
-        tweets_copy.append(tweet)
-        #tweet_geo.append(tweet.user.location)
-        #analysis = TextBlob(tweet.text)
-        encoded_tweet = tokenizer(tweet.text, return_tensors = 'pt', padding = True)
-        output = model(encoded_tweet['input_ids'], encoded_tweet['attention_mask'])
-        scores = output[0][0].detach().numpy()
-        scores = softmax(scores)
-        #print(scores)
-        neg = scores[0]
-        neu = scores[1]
-        pos = scores[2]
-        if neg > pos and neg > neu:
-            negative_list.append(tweet.text)
-            negative += 1
-           # print('negative')
-        elif pos > neg and pos > neg:
-            positive_list.append(tweet.text)
-            positive += 1
-            #print('positive')
-        elif neu > neg and neu > pos:
-            neutral_list.append(tweet.text)
-            #print(neutral)
-            neutral += 1
-    
-    
-    positive = percentage(positive, noOfTweet)
-    negative = percentage(negative, noOfTweet)
-    neutral = percentage(neutral, noOfTweet)
-    polarity = percentage(polarity, noOfTweet)
-
-#Creating Piechart
-    labels = ['Positive [' + (str(positive)+ '%]')], ['Negative [' + (str(negative)+ '%]')], ['Neutral [' + (str(neutral)+ '%]')]
-        
-    fig2 = plt.figure(figsize=(10, 4))
-    colors = ['blue', 'red','green']
-    sizes = [positive,negative,neutral]
-    plt.pie(sizes,colors=colors,startangle=0)
-    plt.title("Sentiment analysis Results for" + search_words)
-    plt.legend(labels)
-    plt.axis('equal')
-    plt.show()
-    
-    
-    
-    processed_text = lambda x: re.sub("(@[A-Za-z0–9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",x)
-    
-    
-    
-    # tweets_copy =[]
-    
-    # for tweet1 in tweets:
-    # tweets_copy.append(tweet1)
-    
-
-    tweets_df = pd.DataFrame()
-    
-    for tweet1 in tweets_copy:
-        hashtags = []
-        try:
-            for hashtag in tweet1.entities["hashtags"]:
-                hashtags.append(hashtag["text"])
-            text = api.get_status(id=tweet1.id, tweet_mode='extended').full_text
-        except:
-            pass
-        tweets_df = tweets_df.append(pd.DataFrame({'user_name': tweet1.user.name, 
-                                                   'user_location': tweet1.user.location,\
-                                                   'user_description': tweet1.user.description,
-                                                   'user_verified': tweet1.user.verified,
-                                                   'date': tweet1.created_at,
-                                                   'text': text, 
-                                                   'hashtags': [hashtags if hashtags else None],
-                                                   'source': tweet1.source}))
-    
-        tweets_df = tweets_df.reset_index(drop=True)
-   
-   
-   
-    tweets_df.text.map(processed_text)
-    tweets_df.text.str.lower()      
-        
-        
-    plt.subplots(1,1, figsize=(20,20))
-    wc_b = WordCloud(stopwords=STOPWORDS, 
-                     background_color="white", max_words=2000,
-                     max_font_size=256,
-                     width=1600, height=1600)
-    wc_b.generate(str(tweets_df.dropna()))
-    plt.imshow(wc_b, interpolation="bilinear")
-    plt.axis('off')
-    plt.savefig('test2',dpi=200)
-   
-    
-   
-   
-
-    tweets_df.user_location.replace('','unknown location', inplace = True)
-
-    gif_runner.empty()
-    st.balloons()
-    st.pyplot(fig2)
-    st.image('test2.png')
-
-    pp3 = plot_percentage("user_location", "countries,roberta", tweets_df)
-    
-    st.pyplot(pp3)
-    
-    pp4 = plot_percentage("source", "sources", tweets_df)   
-   
-   
-    st.pyplot(pp4)
-
-
-
+    str.write("Torch is such a big dependency that running your webapp")
 
 elif option == 'TextBlob' and st.button("Analyse"):
     
