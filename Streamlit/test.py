@@ -81,7 +81,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 if not user_input_name:
     st.warning('Please fill out the required filled')
 
-noOfTweet = st.number_input('Please Insert Number of Tweets (max_value =500)', min_value=1, max_value =500 format="%i")
+noOfTweet = st.number_input('Please Insert Number of Tweets (maximum value =500)', min_value=1, max_value =500,format="%i")
 
 if not noOfTweet:
     st.warning('Please Inset Number of Tweets')
