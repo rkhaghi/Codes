@@ -332,7 +332,6 @@ elif option == 'RoBERTa' and st.button("Analyse"):
     plt.show()
     
     
-    tweets = tweepy.Cursor(api.search, q=new_search, count =200, lang='en').items(noOfTweet)
     
     processed_text = lambda x: re.sub("(@[A-Za-z0–9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",x)
     
