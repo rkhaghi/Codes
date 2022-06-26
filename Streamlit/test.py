@@ -266,7 +266,7 @@ if  option =='Vader NLTK' and st.button("Analyse") :
 
 elif option == 'RoBERTa' and st.button("Analyse"):
     
-    str.write("Torch is such a big dependency that running your webapp")
+    st.write("Torch is such a big dependency that running your webapp")
 
 elif option == 'TextBlob' and st.button("Analyse"):
     
